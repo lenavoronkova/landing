@@ -1,519 +1,76 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Индивидуальная терапия EMDR + IFS</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #2D2D2D;
-            background-color: #FEFEFE;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .text-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* Заголовки */
-        h1 {
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #1A1A1A;
-        }
-        
-        h2 {
-            font-size: 28px;
-            font-weight: 600;
-            margin: 60px 0 30px;
-            color: #1A1A1A;
-        }
-        
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin: 40px 0 20px;
-            color: #8B7355;
-        }
-        
-        /* Подзаголовок */
-        .subtitle {
-            font-size: 24px;
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 10px;
-            color: #8B7355;
-        }
-        
-        .tagline {
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 60px;
-            color: #666;
-            font-style: italic;
-        }
-        
-        /* Основной текст */
-        p {
-            font-size: 16px;
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-        
-        /* Списки */
-        ul {
-            list-style: none;
-            margin: 30px 0;
-        }
-        
-        li {
-            font-size: 16px;
-            margin-bottom: 15px;
-            padding-left: 0;
-            line-height: 1.6;
-        }
-        
-        li strong {
-            color: #1A1A1A;
-        }
-        
-        /* Цитата */
-        blockquote {
-            background: #F5F5F5;
-            border-left: 4px solid #D4C4B0;
-            padding: 30px 40px;
-            margin: 40px 0;
-            font-style: italic;
-            border-radius: 8px;
-        }
-        
-        blockquote p {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        
-        /* Кнопки */
-        .cta-button {
-            display: inline-block;
-            background-color: #8B7355;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 16px;
-            text-align: center;
-            transition: all 0.3s ease;
-            margin: 20px 10px;
-        }
-        
-        .cta-button:hover {
-            background-color: #6B5535;
-            transform: translateY(-2px);
-        }
-        
-        .cta-primary {
-            background-color: #D4C4B0;
-            color: #1A1A1A;
-        }
-        
-        .cta-primary:hover {
-            background-color: #C4B4A0;
-        }
-        
-        /* Контейнеры для кнопок */
-        .button-container {
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        /* Секции */
-        .section {
-            padding: 60px 0;
-            border-bottom: 1px solid #F0F0F0;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 80px 0;
-            background: linear-gradient(135deg, #FEFEFE 0%, #F5F5F5 100%);
-        }
-        
-        /* Карточки результатов */
-        .results-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .result-item {
-            background: #F8F8F8;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #D4C4B0;
-        }
-        
-        /* FAQ */
-        .faq-item {
-            background: #F8F8F8;
-            padding: 25px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #1A1A1A;
-        }
-        
-        /* Разделители */
-        hr {
-            border: none;
-            border-top: 1px solid #E0E0E0;
-            margin: 60px 0;
-        }
-        
-        /* Контакты */
-        .contact-info {
-            background: #F5F5F5;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        .contact-link {
-            color: #8B7355;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 15px;
-        }
-        
-        .contact-link:hover {
-            color: #6B5535;
-        }
-        
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
+{/* Pricing Section */}
+      <section className="py-20 px-6 md:px-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-medium mb-6">
+              Стоимость и запись
+            </h2>
+            <div className="w-28 h-1 bg-gradient-to-r from-[#C4B1A0] to-[#B8A5A5] mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div className="group bg-gradient-to-br from-white to-[#F8F6F4] p-8 rounded-3xl shadow-lg border-2 border-[#F0EFED] hover:border-[#C4B1A0]/30 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#C4B1A0] to-[#B8A5A5] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">🤝</span>
+                </div>
+                <h3 className="text-2xl font-medium mb-4 text-[#2A2A2A]">Знакомство</h3>
+                <div className="text-4xl font-bold text-[#8B7D73] mb-2">Бесплатно</div>
+                <p className="text-[#6B6B6B] text-lg">20-30 минут онлайн</p>
+              </div>
+            </div>
             
-            h1 {
-                font-size: 28px;
-            }
-            
-            h2 {
-                font-size: 24px;
-            }
-            
-            .subtitle {
-                font-size: 20px;
-            }
-            
-            .tagline {
-                font-size: 16px;
-            }
-            
-            blockquote {
-                padding: 20px;
-                margin: 30px 0;
-            }
-            
-            .section {
-                padding: 40px 0;
-            }
-            
-            .hero {
-                padding: 60px 0;
-            }
-            
-            .cta-button {
-                display: block;
-                margin: 15px 0;
-                width: 100%;
-            }
-        }
-        
-        /* Дополнительные стили для лучшего вида */
-        .highlight {
-            background: linear-gradient(120deg, #D4C4B0 0%, #D4C4B0 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 0.3em;
-            background-position: 0 88%;
-            padding: 2px 0;
-        }
-        
-        .no-bullet {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .pricing-box {
-            background: white;
-            border: 2px solid #D4C4B0;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .price {
-            font-size: 32px;
-            font-weight: 700;
-            color: #8B7355;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="hero">
-        <div class="container">
-            <div class="text-container">
-                <h1>Перестань выгорать от того, что должно приносить радость</h1>
-                <div class="subtitle">Индивидуальная терапия EMDR + IFS</div>
-                <div class="subtitle">Для тех, кто устал быть сильной и хочет стать живой</div>
-                <div class="tagline">90 минут глубокой работы с травмой, тревогой и самоценностью</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>Этот формат для вас, если вы:</h2>
-                <ul class="no-bullet">
-                    <li><strong>Херачите и не можете остановиться</strong>, а потом падаете без сил</li>
-                    <li><strong>Боитесь отпустить контроль</strong> — кажется, что всё развалится без вас</li>
-                    <li><strong>Стыдитесь проявляться</strong> в соцсетях, на встречах, в жизни</li>
-                    <li><strong>Живёте в режиме "должна"</strong> — отдыхать можете только во сне</li>
-                    <li><strong>Чувствуете тревогу</strong>, даже когда всё вроде хорошо</li>
-                    <li><strong>Не можете поставить границы</strong> с родителями, клиентами, партнёром</li>
-                    <li><strong>Думаете "со мной что-то не так"</strong> и стыдитесь этого чувства</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <blockquote>
-                    <p><em>"Если сейчас что-то пойдёт не так — я попаду обратно в детство, где было очень плохо"</em></p>
-                    <p>Знакомо? Здесь не слабость. Здесь — память тела о том, что однажды было небезопасно. И с такой памятью можно работать.</p>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>Если вы уже пробовали:</h2>
-                <ul class="no-bullet">
-                    <li><strong>📚 Читали умные книги по психологии</strong> — понимаете теорию, но она не превращается в изменения</li>
-                    <li><strong>🧘 Медитировали месяцами</strong> — знаете техники, но тревога всё равно возвращается</li>
-                    <li><strong>💬 Ходили на разговорную терапию</strong> — много говорили, анализировали, но застряли в понимании без сдвига</li>
-                    <li><strong>📝 Вели дневники эмоций и практиковали аффирмации</strong> — работает временно, потом всё по-старому</li>
-                    <li><strong>🏃 Пытались "убегать" в спорт от проблем</strong> — помогает на час-два, но корень остается</li>
-                    <li><strong>📱 Прошли онлайн-курсы по управлению эмоциями</strong> — дали инструменты, но не системное решение</li>
-                </ul>
-                <p>Всё это <strong>работает и имеет ценность</strong>. Но иногда нужен более точечный подход — когда работаешь не только с мыслями, но и с тем, как травма записалась в теле.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>Терапия — честная встреча с собой</h2>
-                <p>Не всегда уютная. Не всегда простая. Иногда — болезненная.</p>
-                <p>Я работаю с теми, кто готов идти вглубь. С теми, кто понимает: быстрых волшебных таблеток не существует, но <strong>устойчивые изменения — возможны</strong>.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>Что может измениться после работы:</h2>
-                <p><strong>Не обещаю чудес. Но из опыта знаю:</strong></p>
-                <div class="results-grid">
-                    <div class="result-item">
-                        <strong>✓ Тело может перестать жить в режиме "красной тревоги"</strong> — появится возможность расслабиться по-настоящему
-                    </div>
-                    <div class="result-item">
-                        <strong>✓ Внутренний критик может стать советчиком</strong>, а не тираном — работать станет проще, но не легче
-                    </div>
-                    <div class="result-item">
-                        <strong>✓ Границы могут превратиться в естественную часть общения</strong> — постепенно, через практику
-                    </div>
-                    <div class="result-item">
-                        <strong>✓ Стыд может уйти из тела</strong> — я видела это не раз, но путь у каждого свой
-                    </div>
-                    <div class="result-item">
-                        <strong>✓ Может появиться внутренняя опора</strong> — не сразу, но стабильно
-                    </div>
-                    <div class="result-item">
-                        <strong>✓ Отношения могут стать честнее</strong> — когда перестаешь реагировать из детских частей
-                    </div>
-                    <div class="result-item">
-                        <strong>✓ Работа может вернуть смысл и удовольствие</strong> — срывы и откаты останутся, но вы научитесь их проживать по-другому. Раньше тонули в волне, теперь сможете на ней плыть
-                    </div>
+            <div className="group bg-gradient-to-br from-white to-[#F8F6F4] p-8 rounded-3xl shadow-lg border-2 border-[#F0EFED] hover:border-[#8B7D73]/30 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-[#8B7D73]/10 to-transparent rounded-bl-3xl"></div>
+              <div className="text-center relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#8B7D73] to-[#A69B91] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">⚡</span>
                 </div>
+                <h3 className="text-2xl font-medium mb-4 text-[#2A2A2A]">Рабочая сессия</h3>
+                <div className="text-4xl font-bold text-[#8B7D73] mb-2">5000₽</div>
+                <p className="text-[#6B6B6B] text-lg">90 минут онлайн (Zoom)</p>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>Как проходят сессии:</h2>
-                
-                <h3>Первая встреча — знакомство (20-30 минут, бесплатно)</h3>
-                <ul class="no-bullet">
-                    <li>• Разбираемся с вашим запросом</li>
-                    <li>• Я рассказываю, как работаю и какие методы использую</li>
-                    <li>• Смотрим, подходим ли мы друг другу</li>
-                    <li>• Без давления — вы решаете сами, хотите ли продолжать</li>
-                </ul>
-
-                <h3>Дальше — рабочие сессии (90 минут, 5000₽)</h3>
-                <ul class="no-bullet">
-                    <li>• <strong>EMDR-терапия</strong> — работаем с конкретными травматичными эпизодами</li>
-                    <li>• <strong>IFS (работа с частями)</strong> — знакомимся с внутренней системой</li>
-                    <li>• <strong>Схемотерапия</strong> — меняем детские сценарии на взрослые реакции</li>
-                    <li>• Гибкая частота встреч + поддержка между сессиями</li>
-                </ul>
-
-                <h3>Что точно НЕ будет:</h3>
-                <ul class="no-bullet">
-                    <li>❌ Принуждения рассказывать то, к чему не готовы</li>
-                    <li>❌ Обещаний "вылечим за 3 сессии"</li>
-                    <li>❌ Советов "просто полюби себя"</li>
-                    <li>❌ Давления на эмоции — только то, что откликается</li>
-                    <li>❌ Нарушения конфиденциальности — ваши истории остаются при вас</li>
-                </ul>
+          </div>
+          
+          <div className="text-center mb-12">
+            <div className="bg-gradient-to-r from-[#C4B1A0]/5 via-white to-[#B8A5A5]/5 p-8 rounded-3xl transform -rotate-1">
+              <p className="text-center text-[#6B6B6B] text-lg italic leading-relaxed transform rotate-1">
+                Без пакетов, без скидок, без давления на долгую терапию
+                <br />
+                <span className="font-medium text-[#8B7D73]">
+                  Работаем столько, сколько нужно именно вам — от нескольких встреч до длительной терапии.
+                </span>
+              </p>
             </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>О специалисте</h2>
-                <h3>Лена, 46 лет, Санкт-Петербург</h3>
-                <p><em>Психолог, специалист по EMDR и травматерапии</em></p>
-                <ul class="no-bullet">
-                    <li>• <strong>Более 20 лет в психологии</strong>, активная личная практика более 3 лет</li>
-                    <li>• <strong>Образование:</strong> Европейская ассоциация EMDR, схемотерапия, IFS, ACT</li>
-                    <li>• <strong>Методы:</strong> EMDR (основной), схемотерапия, IFS</li>
-                    <li>• <strong>Принципы:</strong> полная конфиденциальность, никаких отзывов клиентов</li>
-                    <li>• <strong>Личный опыт:</strong> прошла путь от ПТСР и тревожности к стабильности</li>
-                </ul>
-                <p><em>Я знаю механизмы травмы изнутри — не только по учебникам, но и по жизни. После любого опыта можно собраться заново.</em></p>
+          </div>
+          
+          <div className="bg-white p-8 rounded-3xl shadow-lg border border-[#F0EFED] mb-12 relative overflow-hidden">
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-[#C4B1A0]/20 to-transparent rounded-full"></div>
+            <h3 className="text-xl font-medium mb-6 text-[#2A2A2A] relative z-10">Записаться можно:</h3>
+            <div className="space-y-4 relative z-10">
+              <div className="flex items-center space-x-4 p-4 bg-[#F8F6F4] rounded-2xl hover:bg-[#C4B1A0]/10 transition-colors duration-300">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#C4B1A0] to-[#B8A5A5] rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">📱</span>
+                </div>
+                <p className="text-[#6B6B6B] text-lg">Написать в Telegram: <span className="font-medium text-[#8B7D73]">@voronkovapsy</span></p>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-[#F8F6F4] rounded-2xl hover:bg-[#C4B1A0]/10 transition-colors duration-300">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#8B7D73] to-[#A69B91] rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✉️</span>
+                </div>
+                <p className="text-[#6B6B6B] text-lg">Email: <span className="font-medium text-[#8B7D73]">2tanita@mail.ru</span></p>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>Стоимость и запись</h2>
-                
-                <div class="pricing-box">
-                    <h3>Знакомство: бесплатно</h3>
-                    <p><em>20-30 минут онлайн</em></p>
-                </div>
-
-                <div class="pricing-box">
-                    <h3>Рабочая сессия</h3>
-                    <div class="price">5000₽</div>
-                    <p><em>90 минут онлайн (Zoom)</em></p>
-                </div>
-
-                <p><strong>Без пакетов, без скидок, без давления на долгую терапию</strong></p>
-                <p>Работаем столько, сколько нужно именно вам — от нескольких встреч до длительной терапии.</p>
-
-                <div class="contact-info">
-                    <h3>Записаться можно:</h3>
-                    <p>
-                        <a href="https://t.me/voronkovapsy" class="contact-link">Написать в Telegram: @voronkovapsy</a><br>
-                        <a href="mailto:2tanita@mail.ru" class="contact-link">Email: 2tanita@mail.ru</a>
-                    </p>
-                </div>
-
-                <div class="button-container">
-                    <a href="https://t.me/voronkovapsy" class="cta-button cta-primary">ЗАПИСАТЬСЯ НА СЕССИЮ</a>
-                </div>
+          </div>
+          
+          <div className="text-center">
+            <div className="relative inline-block">
+              <button className="bg-gradient-to-r from-[#8B7D73] via-[#A69B91] to-[#8B7D73] hover:from-[#7a6c63] hover:via-[#8B7D73] hover:to-[#7a6c63] text-white px-12 py-5 rounded-3xl text-xl font-medium transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 relative z-10 animate-pulse">
+                ЗАПИСАТЬСЯ НА СЕССИЮ
+              </button>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C4B1A0] to-[#B8A5A5] rounded-3xl blur-xl opacity-30 transform translate-y-3 animate-pulse"></div>
             </div>
+          </div>
         </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>Часто задаваемые вопросы</h2>
-                
-                <div class="faq-item">
-                    <div class="faq-question">— Сколько сессий потребуется?</div>
-                    <p>Честно? Зависит от многих факторов. Простую фобию после аварии можно проработать за 5-8 встреч. Если история сложнее — может понадобиться полгода или больше. На знакомительной встрече смогу дать более реалистичный прогноз.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">— Что если мне не подойдет ваш подход?</div>
-                    <p>На знакомительной встрече мы разберемся с вашим запросом и я расскажу, как можно с ним работать. EMDR + другие методы дают широкие возможности: от травм и фобий до повышения уверенности в выступлениях или работы с прокрастинацией. Но иногда нужны другие специалисты — например, семейный терапевт или врач. Поэтому первая встреча бесплатная — чтобы вы получили честную оценку.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">— Нужен ли мне психиатр?</div>
-                    <p>Если есть серьёзные проблемы со сном, паническими атаками, депрессией — да, стоит получить медицинскую поддержку параллельно с терапией.</p>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">— Можно ли работать без конкретного запроса?</div>
-                    <p>Конечно. Можно прийти с ощущением "мне плохо, но не понимаю почему". Мы разберёмся вместе.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-container">
-                <h2>Остались вопросы?</h2>
-                <p>Можете написать мне в любое время. Отвечу в течение дня.</p>
-                
-                <div class="button-container">
-                    <a href="https://t.me/voronkovapsy" class="cta-button">НАПИСАТЬ ВОПРОС</a>
-                </div>
-                
-                <hr>
-                
-                <p style="text-align: center; font-style: italic; color: #666;">
-                    <em>Ваша психика заслуживает уважения, а вы — права быть собой без стыда и страха.</em>
-                </p>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+      </section>
