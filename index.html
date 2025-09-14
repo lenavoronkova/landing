@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMDR-терапия с Леной Воронковой</title>
+    <style>
+        /* Общие стили */
+        :root {
+            --primary: #b08b9b;
+            --primary-dark: #9d7a89;
+            --secondary: #a68b9b;
+            --secondary-dark: #8e7485;
+            --accent: #d4a5a5;
+            --text-dark: #2a2a2a;
+            --text-secondary: #6b6b6b;
+            --background-light: #faf7f5;
+            --background-lighter: #f5f0f3;
+            --white: #fefefe;
+            --border-light: rgba(176, 139, 155, 0.2);
+            --shadow-light: rgba(176, 139, 155, 0.1);
+            --shadow-medium: rgba(176, 139, 155, 0.15);
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--background-lighter) 100%);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.25rem;
+        }
+        h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 1.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1.125rem;
+            text-align: center;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-medium);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        section {
+            padding: 6rem 0;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .max-w-3xl {
+            max-width: 72rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .grid {
+            display: grid;
+        }
+        .gap-6 {
+            gap: 1.5rem;
+        }
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+        .mb-12 {
+            margin-bottom: 3rem;
+        }
+        .mt-8 {
+            margin-top: 2rem;
+        }
+        .mt-12 {
+            margin-top: 3rem;
+        }
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(254, 254, 254, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: none;
+        }
+        .cta-button {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-medium);
+        }
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 8rem; /* Увеличил отступ сверху для учета фиксированного хедера */
+            position: relative;
+        }
+        .hero-content {
+            text-align: center;
+            max-width: 72rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .highlight {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .info-badge {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 0 auto 2rem;
+            max-width: 36rem;
+            box-shadow: 0 8px 32px var(--shadow-light);
+        }
+        /* Problems */
+        .problems {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .problem-item {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px var(--shadow-light);
+            transition: var(--transition);
+        }
+        .problem-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px var(--shadow-medium);
+        }
+        /* Quote */
+        .quote-section {
+            background: linear-gradient(90deg, #fdf6f8, #f8f2f6);
+            text-align: center;
+            padding: 6rem 0;
+        }
+        .quote {
+            font-size: 1.75rem;
+            font-style: italic;
+            line-height: 1.6;
+            max-width: 60rem;
+            margin: 0 auto;
+            position: relative;
+        }
+        .quote::before,
+        .quote::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.3;
+            position: absolute;
+        }
+        .quote::before {
+            top: -1rem;
+            left: -1rem;
+        }
+        .quote::after {
+            bottom: -2rem;
+            right: -1rem;
+        }
+        /* Approach */
+        .approach-item {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 32px var(--shadow-light);
+            transition: var(--transition);
+        }
+        .approach-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px var(--shadow-medium);
+        }
+        .approach-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .philosophy {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 3rem auto 0;
+            max-width: 60rem;
+            box-shadow: 0 8px 32px var(--shadow-light);
+        }
+        /* Results */
+        .results-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px var(--shadow-light);
+            transition: var(--transition);
+        }
+        .results-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px var(--shadow-medium);
+        }
+        .check-mark {
+            background: var(--primary);
+            color: white;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+        /* Sessions */
+        .sessions-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .session-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 8px 32px var(--shadow-light);
+            transition: var(--transition);
+        }
+        .session-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px var(--shadow-medium);
+        }
+        .session-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        .features-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .dot {
+            background: var(--primary);
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .not-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .cross {
+            background: #fee2e2;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .cross span {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        /* About */
+        .about {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        @media (min-width: 768px) {
+            .about-container {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        .about-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px var(--shadow-light);
+        }
+        .about-content {
+            flex: 2;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 8px 32px var(--shadow-light);
+        }
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .principles-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .principles-dot {
+            background: var(--primary);
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        /* Pricing */
+        .pricing {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>');
+            opacity: 0.1;
+            background-size: 100px 100px;
+        }
+        .pricing-container {
+            position: relative;
+            z-index: 1;
+        }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+        }
+        .pricing-features li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .pricing-dot {
+            background: white;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 2rem auto 0;
+            max-width: 40rem;
+        }
+        /* FAQ */
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 32px var(--shadow-light);
+        }
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .faq-question:hover {
+            background: rgba(176, 139, 155, 0.05);
+        }
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-answer.open {
+            max-height: 200px;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+        }
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            max-width: 60rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .signature {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: 3rem;
+            font-size: 1.25rem;
+        }
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: #d1d5db;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+        .footer-links {
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+        /* Анимации при скролле */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Медиа запросы */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            section {
+                padding: 4rem 0;
+            }
+            .hero {
+                min-height: auto;
+                padding: 7rem 0 4rem 0; /* Добавлен отступ сверху для мобильных устройств */
+            }
+            .info-badge {
+                padding: 1rem;
+            }
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+            .quote::before {
+                font-size: 2rem;
+                top: -0.5rem;
+                left: -0.5rem;
+            }
+            .quote::after {
+                font-size: 2rem;
+                bottom: -1.5rem;
+                right: -0.5rem;
+            }
+            /* Увеличиваем высоту хедера на мобильных устройствах */
+            header {
+                padding: 1rem 0;
+            }
+            .header-container {
+                padding: 1rem 0;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+            .btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+            }
+            .session-price, .pricing-price {
+                font-size: 2rem;
+            }
+            .hero {
+                padding: 7.5rem 0 4rem 0; /* Еще больше отступа сверху для маленьких экранов */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Лена Воронкова</a>
+            <button class="cta-button" onclick="scrollToSection('pricing')">Записаться на сессию</button>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animate-on-scroll">Перестань выгорать от того, что должно приносить радость</h1>
+            <h2 class="animate-on-scroll">Индивидуальная терапия <span class="highlight">EMDR + IFS</span></h2>
+            <p class="animate-on-scroll">Для тех, кто устал быть сильной и хочет стать живой</p>
+            <div class="info-badge animate-on-scroll">
+                <p><strong>90 минут глубокой работы</strong> с травмой, тревогой и самооценкой</p>
+            </div>
+            <button class="btn btn-primary animate-on-scroll" onclick="scrollToSection('pricing')">Записаться на сессию</button>
+        </div>
+    </section>
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="animate-on-scroll">Этот формат для вас, если вы:</h2>
+            </div>
+            <div class="grid gap-6 mt-8">
+                <div class="problem-item animate-on-scroll">
+                    <p><strong>Херачите и не можете остановиться,</strong> а потом падаете без сил</p>
+                </div>
+                <div class="problem-item animate-on-scroll">
+                    <p><strong>Боитесь отпустить контроль —</strong> кажется, что всё развалится без вас</p>
+                </div>
+                <div class="problem-item animate-on-scroll">
+                    <p><strong>Стыдитесь проявляться</strong> в соцсетях, на встречах, в жизни</p>
+                </div>
+                <div class="problem-item animate-on-scroll">
+                    <p><strong>Живёте в режиме "должна"</strong> — отдыхать можете только во сне</p>
+                </div>
+                <div class="problem-item animate-on-scroll">
+                    <p><strong>Чувствуете тревогу,</strong> даже когда всё вроде хорошо</p>
+                </div>
+                <div class="problem-item animate-on-scroll">
+                    <p><strong>Не можете поставить границы</strong> с родителями, клиентами, партнёром</p>
+                </div>
+                <div class="problem-item animate-on-scroll">
+                    <p><strong>Думаете "со мной что-то не так"</strong> и стыдитесь этого чувства</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <blockquote class="quote animate-on-scroll">
+                "Если сейчас что-то пойдёт не так — я попаду обратно в детство, где было очень плохо"
+                <br><br>
+                <span style="font-weight: normal;">Знакомо? Здесь не слабость. Здесь — память тела о том, что однажды было небезопасно. И с такой памятью можно работать.</span>
+            </blockquote>
+        </div>
+    </section>
+    <!-- Approach Section -->
+    <section class="container">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="animate-on-scroll">Если вы уже пробовали:</h2>
+            <p class="animate-on-scroll">Всё это <strong>работает и имеет ценность</strong>. Но иногда нужен более точечный подход — когда работаешь не только с мыслями, но и с тем, как травма записалась в теле.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon">📚</div>
+                <h3>Читали умные книги по психологии</h3>
+                <p>Понимаете теорию, но она не превращается в изменения</p>
+            </div>
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon">🧘</div>
+                <h3>Медитировали месяцами</h3>
+                <p>Знаете техники, но тревога всё равно возвращается</p>
+            </div>
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon">💬</div>
+                <h3>Ходили на разговорную терапию</h3>
+                <p>Много говорили, анализировали, но застряли в понимании без сдвига</p>
+            </div>
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon">📝</div>
+                <h3>Вели дневники эмоций и практиковали аффирмации</h3>
+                <p>Работает временно, потом всё по-старому</p>
+            </div>
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon">🏃</div>
+                <h3>Пытались "убегать" в спорт от проблем</h3>
+                <p>Помогает на час-два, но корень остается</p>
+            </div>
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon">📱</div>
+                <h3>Прошли онлайн-курсы по управлению эмоциями</h3>
+                <p>Дали инструменты, но не системное решение</p>
+            </div>
+        </div>
+        <div class="philosophy animate-on-scroll">
+            <h3>Терапия — честная встреча с собой</h3>
+            <p>Не всегда уютная. Не всегда простая. Иногда — болезненная.</p>
+            <p>Я работаю с теми, кто готов идти вглубь. С теми, кто понимает: быстрых волшебных таблеток не существует, но <strong style="color: var(--primary);">устойчивые изменения — возможны</strong>.</p>
+        </div>
+    </section>
+    <!-- Results Section -->
+    <section class="problems">
+        <div class="container">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="animate-on-scroll">Что может измениться после работы:</h2>
+                <p class="animate-on-scroll">Не обещаю чудес. Но из опыта знаю:</p>
+            </div>
+            <div class="space-y-4 mt-8">
+                <div class="results-item animate-on-scroll">
+                    <div class="check-mark">✓</div>
+                    <p><strong>Тело может перестать жить в режиме "красной тревоги"</strong> — появится возможность расслабиться по-настоящему</p>
+                </div>
+                <div class="results-item animate-on-scroll">
+                    <div class="check-mark">✓</div>
+                    <p><strong>Внутренний критик может стать советчиком,</strong> а не тираном — работать станет проще, но не легче</p>
+                </div>
+                <div class="results-item animate-on-scroll">
+                    <div class="check-mark">✓</div>
+                    <p><strong>Границы могут превратиться в естественную часть общения</strong> — постепенно, через практику</p>
+                </div>
+                <div class="results-item animate-on-scroll">
+                    <div class="check-mark">✓</div>
+                    <p><strong>Стыд может уйти из тела</strong> — я видела это не раз, но путь у каждого свой</p>
+                </div>
+                <div class="results-item animate-on-scroll">
+                    <div class="check-mark">✓</div>
+                    <p><strong>Может появиться внутренняя опора</strong> — не сразу, но стабильно</p>
+                </div>
+                <div class="results-item animate-on-scroll">
+                    <div class="check-mark">✓</div>
+                    <p><strong>Отношения могут стать честнее</strong> — когда перестаешь реагировать из детских частей</p>
+                </div>
+                <div class="results-item animate-on-scroll">
+                    <div class="check-mark">✓</div>
+                    <p><strong>Работа может вернуть смысл и удовольствие</strong> — срывы и откаты останутся, но вы научитесь их проживать по-другому</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sessions Section -->
+    <section class="container">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="animate-on-scroll">Как проходят сессии:</h2>
+        </div>
+        <div class="sessions-grid mt-8">
+            <div class="session-card animate-on-scroll">
+                <h3>Первая встреча — знакомство</h3>
+                <p>20-30 минут, бесплатно</p>
+                <ul class="features-list mt-4">
+                    <li><span class="dot"></span> Разбираемся с вашим запросом</li>
+                    <li><span class="dot"></span> Я рассказываю, как работаю и какие методы использую</li>
+                    <li><span class="dot"></span> Смотрим, подходим ли мы друг другу</li>
+                    <li><span class="dot"></span> Без давления — вы решаете сами, хотите ли продолжать</li>
+                </ul>
+                <button class="btn btn-outline mt-6" onclick="openContactModal('знакомство')">Записаться на знакомство</button>
+            </div>
+            <div class="session-card animate-on-scroll">
+                <h3>Дальше — рабочие сессии</h3>
+                <p>90 минут, 5000₽</p>
+                <ul class="features-list mt-4">
+                    <li><span class="dot"></span> EMDR-терапия — работаем с конкретными травматичными эпизодами</li>
+                    <li><span class="dot"></span> IFS (работа с частями) — знакомимся с внутренней системой</li>
+                    <li><span class="dot"></span> Схема-терапия — меняем детские сценарии на взрослые реакции</li>
+                    <li><span class="dot"></span> Гибкая частота встреч + поддержка между сессиями</li>
+                </ul>
+                <button class="btn btn-primary mt-6" onclick="openContactModal('рабочая сессия')">Записаться на сессию</button>
+            </div>
+        </div>
+        <div class="session-card animate-on-scroll" style="margin-top: 3rem;">
+            <h3>Что точно НЕ будет:</h3>
+            <div class="not-list mt-4">
+                <div><span class="cross"><span>❌</span></span> Принуждения рассказывать то, к чему не готовы</div>
+                <div><span class="cross"><span>❌</span></span> Обещаний "вылечим за 3 сессии"</div>
+                <div><span class="cross"><span>❌</span></span> Советов "просто полюби себя"</div>
+                <div><span class="cross"><span>❌</span></span> Давления на эмоции — только то, что откликается</div>
+                <div><span class="cross"><span>❌</span></span> Нарушения конфиденциальности — ваши истории остаются при вас</div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image animate-on-scroll">
+                    <img src="pic.jpg" alt="Лена Воронкова, психолог" class="about-img">
+                </div>
+                <div class="about-content animate-on-scroll">
+                    <h2>О специалисте</h2>
+                    <p><strong>Лена, 46 лет, Санкт-Петербург</strong><br>
+                    Психолог, специалист по EMDR и травматерапии</p>
+                    <div class="education-grid">
+                        <div>
+                            <h4>Образование:</h4>
+                            <ul>
+                                <li>• Европейская ассоциация EMDR</li>
+                                <li>• Схема-терапия</li>
+                                <li>• IFS</li>
+                                <li>• ACT</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Методы:</h4>
+                            <ul>
+                                <li>• EMDR (основной)</li>
+                                <li>• Схема-терапия</li>
+                                <li>• IFS</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="principles-list">
+                        <div class="principles-item">
+                            <span class="principles-dot"></span>
+                            <span><strong>Более 20 лет в психологии</strong>, активная личная практика более 3 лет</span>
+                        </div>
+                        <div class="principles-item">
+                            <span class="principles-dot"></span>
+                            <span><strong>Принципы:</strong> полная конфиденциальность, никаких отзывов клиентов</span>
+                        </div>
+                        <div class="principles-item">
+                            <span class="principles-dot"></span>
+                            <span><strong>Личный опыт:</strong> прошла путь от ПТСР и тревожности к стабильности</span>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; margin-top: 1.5rem;">
+                        Я знаю механизмы травмы изнутри — не только по учебникам, но и по жизни. После любого опыта можно собраться заново.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container pricing-container">
+            <h2 class="text-center animate-on-scroll">Стоимость и запись</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card animate-on-scroll">
+                    <h3>Знакомство</h3>
+                    <p>20-30 минут онлайн</p>
+                    <div class="pricing-price">бесплатно</div>
+                    <ul class="pricing-features">
+                        <li><span class="pricing-dot"></span> Разбор вашего запроса</li>
+                        <li><span class="pricing-dot"></span> Обсуждение подхода</li>
+                        <li><span class="pricing-dot"></span> Определение взаимопонимания</li>
+                    </ul>
+                    <button class="btn btn-primary" style="background: white; color: var(--primary); margin-top: 1.5rem;" onclick="openContactModal('знакомство')">Записаться на знакомство</button>
+                </div>
+                <div class="pricing-card animate-on-scroll">
+                    <h3>Рабочая сессия</h3>
+                    <p>90 минут онлайн (Zoom)</p>
+                    <div class="pricing-price">5000₽</div>
+                    <ul class="pricing-features">
+                        <li><span class="pricing-dot"></span> EMDR-терапия</li>
+                        <li><span class="pricing-dot"></span> IFS (работа с частями)</li>
+                        <li><span class="pricing-dot"></span> Схема-терапия</li>
+                        <li><span class="pricing-dot"></span> Поддержка между сессиями</li>
+                    </ul>
+                    <button class="btn btn-primary" style="background: white; color: var(--primary); margin-top: 1.5rem;" onclick="openContactModal('рабочая сессия')">Записаться на сессию</button>
+                </div>
+            </div>
+            <div class="contact-info animate-on-scroll">
+                <p style="margin-bottom: 1rem;"><strong>Без пакетов, без скидок, без давления на долгую терапию</strong><br>
+                Работаем столько, сколько нужно именно вам — от нескольких встреч до длительной терапии.</p>
+            </div>
+            <div class="contact-info animate-on-scroll">
+                <h3>Записаться можно:</h3>
+                <p><a href="tg://resolve?domain=voronkovapsy" class="contact-link" style="color: white; text-decoration: underline;">Написать в Telegram: @voronkovapsy</a></p>
+                <p><a href="mailto:2tanita@mail.ru" class="contact-link" style="color: white; text-decoration: underline;">Email: 2tanita@mail.ru</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="container">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="animate-on-scroll">Часто задаваемые вопросы</h2>
+        </div>
+        <div class="max-w-3xl mx-auto mt-8">
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">
+                    Сколько сессий потребуется?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Честно? Зависит от многих факторов. Простую фобию после аварии можно проработать за 5-8 встреч. Если история сложнее — может понадобиться полгода или больше. На знакомительной встрече смогу дать более реалистичный прогноз.</p>
+                </div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">
+                    Что если мне не подойдет ваш подход?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>На знакомительной встрече мы разберемся с вашим запросом и я расскажу, как можно с ним работать. EMDR + другие методы дают широкие возможности: от травм и фобий до повышения уверенности в выступлениях или работы с прокрастинацией. Но иногда нужны другие специалисты — например, семейный терапевт или врач. Поэтому первая встреча бесплатная — чтобы вы получили честную оценку.</p>
+                </div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">
+                    Нужен ли мне психиатр?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Если есть серьёзные проблемы со сном, паническими атаками, депрессией — да, стоит получить медицинскую поддержку параллельно с терапией.</p>
+                </div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <div class="faq-question">
+                    Можно ли работать без конкретного запроса?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Конечно. Можно прийти с ощущением "мне плохо, но не понимаю почему". Мы разберёмся вместе.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Final CTA -->
+    <section class="container">
+        <div class="final-cta">
+            <h2 class="animate-on-scroll">Остались вопросы?</h2>
+            <p class="animate-on-scroll">Можете написать мне в любое время. Отвечу в течение дня.</p>
+            <button class="btn btn-primary animate-on-scroll" onclick="openContactModal('вопрос')">Написать вопрос</button>
+            <p class="signature animate-on-scroll">
+                Ваша психика заслуживает уважения, а вы — права быть собой без стыда и страха.
+            </p>
+        </div>
+    </section>
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+        <div class="modal-content" style="background: white; padding: 2rem; border-radius: 1rem; max-width: 500px; width: 90%; position: relative;">
+            <button onclick="closeContactModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;">×</button>
+            <h3 id="modalTitle" style="margin-top: 0;">Связаться с психологом</h3>
+            <p id="modalDescription">Пожалуйста, выберите удобный способ связи:</p>
+            <div style="margin: 2rem 0;">
+                <a href="tg://resolve?domain=voronkovapsy" class="btn btn-primary" style="display: block; margin-bottom: 1rem; text-align: center;">Написать в Telegram</a>
+                <a href="mailto:2tanita@mail.ru" class="btn btn-outline" style="display: block; text-align: center;">Написать на Email</a>
+            </div>
+            <p style="font-size: 0.9rem; color: #6b6b6b; text-align: center;">Я отвечу в течение дня</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo" style="color: #6b6b6b; font-size: 1.75rem;">Лена Воронкова</div>
+            <div class="footer-links">
+                <p>© 2025 Все права защищены</p>
+                <p>Конфиденциальность • Политика обработки данных</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Анимации при скролле
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+        // FAQ аккордеон
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const toggle = question.querySelector('.faq-toggle');
+                if (answer.classList.contains('open')) {
+                    answer.classList.remove('open');
+                    toggle.textContent = '+';
+                } else {
+                    answer.classList.add('open');
+                    toggle.textContent = '−';
+                }
+            });
+        });
+        // Функция для прокрутки к секции
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                // Учитываем высоту фиксированного хедера
+                const headerOffset = document.querySelector('header').offsetHeight;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // Функции для модального окна контактов
+        function openContactModal(service) {
+            const modal = document.getElementById('contactModal');
+            const title = document.getElementById('modalTitle');
+            const description = document.getElementById('modalDescription');
+            title.textContent = `Запись на ${service}`;
+            description.textContent = `Выберите удобный способ связи для записи на ${service}:`;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeContactModal() {
+            const modal = document.getElementById('contactModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        // Закрытие модального окна при клике вне его
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                closeContactModal();
+            }
+        });
+        // Закрытие модального окна при нажатии Escape
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeContactModal();
+            }
+        });
+    </script>
+</body>
+</html>
